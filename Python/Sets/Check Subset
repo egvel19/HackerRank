@@ -1,0 +1,7 @@
+N = int(input())
+for i in range(N):
+    numsA = int(input())
+    s1 = set(list(map(int, input().split())))
+    numsB = int(input())
+    s2 = set(list(map(int, input().split())))
+    print(s1<=s2)
