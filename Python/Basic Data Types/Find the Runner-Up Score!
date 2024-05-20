@@ -1,6 +1,6 @@
 if __name__ == '__main__':
     n = int(input())
     arr = map(int, input().split())
-    arr1 = set(arr)
-    arr2 = sorted(arr1)
-    print(arr2[-2])
+    scores = list(set(arr)) #using set to get unique values
+    scores.sort()
+    print(scores[-2])
