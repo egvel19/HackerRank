@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    N = int(input())
+    res = []
+    for i in range(N):
+        commandList = input().split()
+        if commandList[0] == "insert":
+            res.insert(int(commandList[1]), int(commandList[2]))
+        elif commandList[0] == "print":
+            print(res)
+        elif commandList[0] == "remove":
+            res.remove(int(commandList[1]))
+        elif commandList[0] == "append":
+            res.append(int(commandList[1]))
+        elif commandList[0] == "sort":
+            res.sort()
+        elif commandList[0] == "pop":
+            res.pop()
+        elif commandList[0] == "reverse":
+            res.reverse()
