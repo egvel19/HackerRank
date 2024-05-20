@@ -1,0 +1,17 @@
+from collections import defaultdict
+n, m = map(int, input().split())
+A = defaultdict(list)
+for i in range(n):
+    curWord = input()
+    curIndex = i+1
+    A[curWord].append(curIndex)
+
+for i in range(m):
+    curCh = input()
+    if A[curCh] !=[]:
+        res = ""
+        for i in A[curCh]:
+            res += str(i) + " "
+        print(res)
+    else:
+        print(-1)
