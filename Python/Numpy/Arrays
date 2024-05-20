@@ -1,0 +1,11 @@
+import numpy
+
+def arrays(arr):
+    lst = list(map(float, arr))
+    reversedList = lst[::-1]
+    arr = numpy.array(reversedList)
+    return arr
+
+arr = input().strip().split(' ')
+result = arrays(arr)
+print(result)
