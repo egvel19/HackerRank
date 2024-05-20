@@ -1,0 +1,12 @@
+import numpy as np
+
+
+N, M = map(int, input().split())
+
+array = []
+for i in range(N):
+    array.append(np.array(list(map(int, input().split()))))
+
+min = np.min(array, axis=1)
+max = np.max(min, axis=0)
+print(max)
