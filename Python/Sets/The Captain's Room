@@ -1,0 +1,9 @@
+K = int(input())
+lst = list(map(int, input().split()))
+s = set(lst)
+
+setSum = sum(s) * K
+lstSum = sum(lst)
+
+res = (setSum - lstSum) // (K-1)
+print(res)
