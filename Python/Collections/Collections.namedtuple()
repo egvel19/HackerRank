@@ -1,0 +1,12 @@
+from collections import namedtuple
+
+N = int(input())
+Student = namedtuple('Student', input().replace(' ', ','))
+res = 0
+for i in range(N):
+    st = Student(*input().split())
+    res += int(st.MARKS)
+
+print(res/N)
+    
+        
