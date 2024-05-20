@@ -1,0 +1,8 @@
+N = int(input())
+s1 = set(list(map(int, input().split())))
+M = int(input())
+s2 = set(list(map(int, input().split())))
+
+finalSet = s1.symmetric_difference(s2)
+res = len(finalSet)
+print(res)
