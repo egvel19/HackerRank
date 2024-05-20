@@ -1,0 +1,17 @@
+num = int(input())
+A = set(list(map(int, input().split())))
+N = int(input())
+for i in range(N):
+    command = input().split()
+    s = set(list(map(int, input().split())))
+    if command[0]=='intersection_update':
+        A.intersection_update(s)
+    elif command[0]=='update':
+        A.update(s)
+    elif command[0]=='symmetric_difference_update':
+        A.symmetric_difference_update(s)
+    elif command[0]=='difference_update':
+        A.difference_update(s)
+
+res = sum(A)
+print(res)
