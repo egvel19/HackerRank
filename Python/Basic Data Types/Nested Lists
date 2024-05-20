@@ -1,0 +1,16 @@
+if __name__ == '__main__':
+    info = {}
+    scores = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        scores.append(score)
+        info[name] = score
+    
+    uniquescores = list(set(scores)) 
+    uniquescores.sort()
+    secondLowest = uniquescores[1]
+    
+    names = [name for name, value in info.items() if value==secondLowest]
+    names.sort()
+    [print(name) for name in names]
