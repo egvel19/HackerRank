@@ -1,0 +1,18 @@
+import textwrap
+
+def wrap(string, max_width):
+    res = ""
+    counter = 0
+    isMoreLeft = True
+    while isMoreLeft:
+        if (counter+ max_width) > len(string):
+            isMoreLeft=False
+        curStr = string[counter:counter+max_width]
+        res += curStr + '\n'
+        counter+=max_width
+    return res
+
+if __name__ == '__main__':
+    string, max_width = input(), int(input())
+    result = wrap(string, max_width)
+    print(result)
