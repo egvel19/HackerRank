@@ -1,0 +1,8 @@
+import numpy as np
+
+
+dimension = tuple(map(int, input().split()))
+
+print(np.zeros(dimension, dtype=int))
+print(np.ones(dimension, dtype=int))
+
