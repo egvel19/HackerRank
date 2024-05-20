@@ -6,3 +6,6 @@ if __name__ == '__main__':
         scores = list(map(float, line))
         student_marks[name] = scores
     query_name = input()
+    list = student_marks.get(query_name)
+    average = sum(list)/len(list)
+    print("{:.2f}".format(average))
