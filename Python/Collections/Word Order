@@ -1,0 +1,21 @@
+n = int(input())
+dct = {}
+lst = []
+for i in range(n):
+    word = str(input()) 
+    lst.append(word)
+    if word in dct:
+        dct[word] +=1
+    else: 
+        dct[word] = 1
+
+lenSet = set(lst)
+res1 = len(lenSet)
+
+res2 = ''
+for key, value in dct.items():
+    res2 += str(value)
+    res2+= ' '
+
+print(res1)
+print(res2)
