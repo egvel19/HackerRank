@@ -1,0 +1,7 @@
+if __name__ == '__main__':
+    n = int(input())
+    res = ''
+    for i in range(n):
+        curNum = i+1
+        res += str(curNum)
+    print(res)
