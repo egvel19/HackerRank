@@ -1,0 +1,33 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    res=""
+    length = len(s)
+    newWordComing = False
+    for i in range(length):
+        if i==0:
+            res+=s[i].upper()
+        elif s[i]==" ":
+            res+=" "
+            newWordComing = True
+        elif newWordComing:
+            res+=s[i].upper()
+            newWordComing = False
+        else:
+            res+=s[i]
+    return res
+            
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    s = input()
+    result = solve(s)
+    fptr.write(result + '\n')
+    fptr.close()
