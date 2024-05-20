@@ -1,0 +1,14 @@
+A = set(map(int,input().split()))
+n = int(input())
+
+res = True
+for i in range(n):
+    s = set(map(int, input().split()))
+    if s.issubset(A):
+        if A == s:
+            res = False
+            break
+    elif not s.issubset(A):
+        res = False
+        break
+print(res)
