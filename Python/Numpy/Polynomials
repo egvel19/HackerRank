@@ -1,0 +1,9 @@
+import numpy as np
+
+coeff = np.array(list(map(float, input().split())))
+
+x = int(input())
+
+p = np.polyval(coeff, x)
+
+print(p)
