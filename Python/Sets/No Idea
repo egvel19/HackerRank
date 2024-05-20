@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+B, M = map(int, input().split())
+array = list(map(int, input().split()))
+A = set(map(int, input().split()))
+B = set(map(int, input().split()))
+res = 0
+for i in array:
+    isInA = i in A
+    isInB = i in B
+    if isInA:
+        res+=1
+    elif isInB:
+        res-=1
+print(res)
