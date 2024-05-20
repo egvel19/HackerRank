@@ -1,0 +1,21 @@
+N = int(input())
+s = set(list(map(int, input().split())))
+M = int(input())
+
+for i in range(M):
+    curLine = input().split()
+    if curLine[0]=='pop':
+        if s:
+            s.pop()
+    elif curLine[0]=='remove':
+        num = int(curLine[1])
+        if num in s:
+            s.remove(num)
+    elif curLine[0]=='discard':
+        num = int(curLine[1])
+        s.discard(num)
+
+res = sum(s)
+print(res)
+        
+        
