@@ -1,0 +1,18 @@
+def merge_the_tools(string, k):
+    n = len(string)
+    div = n//k
+    for i in range(div):
+        startPoint = i*k
+        endPoint = i*k + k
+        substr = string[startPoint : endPoint]
+        cleanSubstr = list(set(substr))
+        res=""
+        for i in cleanSubstr:
+            res+=i
+        print(res)
+        
+    
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
