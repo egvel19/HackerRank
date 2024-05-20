@@ -1,0 +1,18 @@
+from collections import OrderedDict
+
+N = int(input())
+
+ordDict = OrderedDict()
+for i in range(N):
+    itemName, net_price = input().rsplit(' ', 1)
+    net_price = int(net_price)
+    
+    if itemName in ordDict:
+        ordDict[itemName] += net_price
+    else:
+        ordDict[itemName] = net_price
+        
+        
+for name, price in ordDict.items():
+    print(name, price)
+    
