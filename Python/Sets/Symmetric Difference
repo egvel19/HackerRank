@@ -1,0 +1,19 @@
+N = input()
+nlist = list(map(int, input().split()))
+M = input()
+mlist = list(map(int, input().split()))
+
+nSet = set(nlist)
+mSet = set(mlist)
+
+ndiff = nSet.difference(mSet)
+mdiff = mSet.difference(nSet)  
+
+resList = list(ndiff) + list(mdiff)
+resList.sort()
+resSet = set(resList)
+
+generator_expr = (print(i) for i in resSet)
+
+for _ in generator_expr:
+    pass
