@@ -1,0 +1,15 @@
+import numpy as np
+
+
+N, M = map(int, input().split())
+
+arr = []
+
+for i in range(N):
+    arr.append(np.array(list(map(int, input().split()))))
+
+sum = np.sum(arr, axis=0)
+prod = np.prod(sum)
+
+print(prod)
+
